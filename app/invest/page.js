@@ -60,15 +60,15 @@ export default function Invest() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
             <div className="bg-black/80 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Strategic Investment Opportunities</span>
+              <span className="text-white text-sm font-medium">{`Strategic Investment Opportunities`}</span>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Invest In <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Zimbabwe's Future</span>
+            Invest In <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">{`Zimbabwe's Future`}</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Join us in building Zimbabwe's future through strategic investments in healthcare, agriculture, 
-            real estate, and sustainable energy.
+            {`Join us in building Zimbabwe's future through strategic investments in healthcare, agriculture, 
+            real estate, and sustainable energy.`}
           </p>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function Invest() {
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200`}
               >
-                Investment Opportunities
+                {`Investment Opportunities`}
               </button>
               <button
                 onClick={() => setActiveTab('process')}
@@ -202,7 +202,7 @@ export default function Invest() {
                   Our Investment Process
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  We've designed a streamlined process to make investing with us simple and transparent.
+                  {`We've designed a streamlined process to make investing with us simple and transparent.`}
                 </p>
               </div>
               
@@ -363,7 +363,7 @@ export default function Invest() {
             Ready to Start Your Investment Journey?
           </h2>
           <p className="text-xl text-gray-300 mb-10">
-            Contact our investment team to discuss how you can be part of Zimbabwe's growth story.
+            {` Contact our investment team to discuss how you can be part of Zimbabwe's growth story.`}
           </p>
           <Link
             href="/contact"

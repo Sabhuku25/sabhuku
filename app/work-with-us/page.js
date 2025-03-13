@@ -74,8 +74,8 @@ export default function WorkWithUs() {
             Work With <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Sabhuku</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Join our team and be part of Zimbabwe's industrial transformation. 
-            We're always looking for talented individuals who share our vision.
+           {` Join our team and be part of Zimbabwe's industrial transformation. 
+            We're always looking for talented individuals who share our vision.`}
           </p>
         </div>
       </section>
