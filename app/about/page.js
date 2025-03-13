@@ -52,7 +52,7 @@ export default function About() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
             <div className="bg-black/80 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Building Zimbabwe's Future</span>
+              <span className="text-white text-sm font-medium">{`Building Zimbabwe's Future`}</span>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
@@ -156,12 +156,12 @@ export default function About() {
             <span className="h-1 w-10 bg-white/50 rounded-full ml-2"></span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
-            Shaping Tomorrow's Zimbabwe
+            {`Shaping Tomorrow's Zimbabwe`}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            To be the leading force in Zimbabwe's industrial transformation, 
+            {`To be the leading force in Zimbabwe's industrial transformation, 
             driving innovation and sustainable development across healthcare, 
-            agriculture, real estate, and environmental sectors.
+            agriculture, real estate, and environmental sectors.`}
           </p>
         </div>
       </section>

@@ -54,8 +54,8 @@ export default function Contact() {
             Contact <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Sabhuku</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Have a question or want to learn more about our companies? 
-            We'd love to hear from you.
+            {`Have a question or want to learn more about our companies? 
+            We'd love to hear from you.`}
           </p>
         </div>
       </section>
