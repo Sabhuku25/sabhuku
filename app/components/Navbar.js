@@ -63,16 +63,16 @@ export default function Navbar() {
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
         <div className="pt-2 pb-3 space-y-1">
           <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            About Us!
+            About Us
           </Link>
           <Link href="/work-with-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Work With Us!
+            Work With Us
           </Link>
           <Link href="/invest" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Invest In Us!
+            Invest In Us
           </Link>
           <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Contact Us!
+            Contact Us
           </Link>
         </div>
       </div>

@@ -201,7 +201,7 @@ export default function WorkWithUs() {
             Ready to Join Our Team?
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Take the first step towards an exciting career with Sabhuku. We're always looking for talented individuals who share our values and vision.
+            {`Take the first step towards an exciting career with Sabhuku. We're always looking for talented individuals who share our values and vision.`}
           </p>
           <a
             href="/contact"

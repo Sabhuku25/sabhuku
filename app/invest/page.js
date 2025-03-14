@@ -67,7 +67,7 @@ export default function Invest() {
             Invest in <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Join us in building Zimbabwe's industrial future through strategic investments in our portfolio companies.
+            {`Join us in building Zimbabwe's industrial future through strategic investments in our portfolio companies.`}
           </p>
         </div>
       </section>
