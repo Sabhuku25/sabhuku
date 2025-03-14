@@ -47,7 +47,7 @@ export default function Invest() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-black animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-yellow-600 to-green-800 animate-gradient-x"></div>
         
         {/* Subtle grid overlay */}
         <div className="absolute inset-0 opacity-10">
@@ -58,17 +58,16 @@ export default function Invest() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-black/80 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">{`Strategic Investment Opportunities`}</span>
+          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
+            <div className="bg-gray-900/90 rounded-full px-4 py-1">
+              <span className="text-white text-sm font-medium">Investment Opportunities</span>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Invest In <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">{`Zimbabwe's Future`}</span>
+            Invest in <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            {`Join us in building Zimbabwe's future through strategic investments in healthcare, agriculture, 
-            real estate, and sustainable energy.`}
+          <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+            Join us in building Zimbabwe's industrial future through strategic investments in our portfolio companies.
           </p>
         </div>
       </section>
@@ -82,7 +81,7 @@ export default function Invest() {
                 onClick={() => setActiveTab('opportunities')}
                 className={`${
                   activeTab === 'opportunities'
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-green-500 text-green-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200`}
               >
@@ -92,7 +91,7 @@ export default function Invest() {
                 onClick={() => setActiveTab('process')}
                 className={`${
                   activeTab === 'process'
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-green-500 text-green-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200`}
               >
@@ -102,7 +101,7 @@ export default function Invest() {
                 onClick={() => setActiveTab('benefits')}
                 className={`${
                   activeTab === 'benefits'
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-green-500 text-green-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200`}
               >
@@ -127,20 +126,20 @@ export default function Invest() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <div className="absolute top-24 right-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-24 left-10 w-40 h-40 bg-purple-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {activeTab === 'opportunities' && (
             <div>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center justify-center mb-4">
-                  <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-                  <span className="text-blue-600 font-medium">OPPORTUNITIES</span>
-                  <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+                  <span className="text-green-600 font-medium">OPPORTUNITIES</span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
                   Current Investment Opportunities
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -175,7 +174,7 @@ export default function Invest() {
                       <Link 
                         href="/contact" 
                         className="inline-flex items-center justify-center w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
-                          bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700
+                          bg-gradient-to-r from-green-600 to-green-700
                           transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                       >
                         Request More Information
@@ -194,11 +193,11 @@ export default function Invest() {
             <div>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center justify-center mb-4">
-                  <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-                  <span className="text-blue-600 font-medium">PROCESS</span>
-                  <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+                  <span className="text-green-600 font-medium">PROCESS</span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
                   Our Investment Process
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -209,7 +208,7 @@ export default function Invest() {
               <div className="max-w-4xl mx-auto">
                 <div className="relative">
                   {/* Timeline line */}
-                  <div className="absolute left-4 inset-y-0 w-0.5 bg-gradient-to-b from-blue-600 via-purple-600 to-pink-600"></div>
+                  <div className="absolute left-4 inset-y-0 w-0.5 bg-gradient-to-b from-green-600 via-green-700 to-green-800"></div>
                   
                   {/* Timeline items */}
                   <div className="space-y-16">
@@ -241,7 +240,7 @@ export default function Invest() {
                       }
                     ].map((item, index) => (
                       <div key={index} className="relative pl-16">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold shadow-lg">
+                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-gradient-to-r from-green-600 to-green-700 flex items-center justify-center text-white font-bold shadow-lg">
                           {item.step}
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
@@ -260,11 +259,11 @@ export default function Invest() {
             <div>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center justify-center mb-4">
-                  <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-                  <span className="text-blue-600 font-medium">BENEFITS</span>
-                  <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+                  <span className="text-green-600 font-medium">BENEFITS</span>
+                  <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
                   Benefits of Investing With Us
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -278,7 +277,7 @@ export default function Invest() {
                     title: 'Attractive Returns',
                     description: 'Our carefully selected projects offer competitive returns compared to traditional investment vehicles.',
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )
@@ -287,7 +286,7 @@ export default function Invest() {
                     title: 'Local Expertise',
                     description: 'Our deep understanding of the Zimbabwean market helps navigate complexities and identify unique opportunities.',
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )
@@ -296,7 +295,7 @@ export default function Invest() {
                     title: 'Diversification',
                     description: 'Spread your investment across multiple sectors to balance risk and optimize returns.',
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                       </svg>
                     )
@@ -305,7 +304,7 @@ export default function Invest() {
                     title: 'Social Impact',
                     description: "Your investment contributes to Zimbabwe's economic development and creates positive social change.",
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                       </svg>
                     )
@@ -314,7 +313,7 @@ export default function Invest() {
                     title: 'Transparent Management',
                     description: "Regular reporting and updates ensure you're always informed about your investment performance.",
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     )
@@ -323,14 +322,14 @@ export default function Invest() {
                     title: 'Long-term Growth',
                     description: 'Our focus on sustainable business models ensures long-term value creation and growth potential.',
                     icon: (
-                      <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                       </svg>
                     )
                   }
                 ].map((benefit, index) => (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div className="bg-blue-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                    <div className="bg-green-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                       {benefit.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-gray-900">{benefit.title}</h3>
@@ -344,7 +343,7 @@ export default function Invest() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-black text-white relative overflow-hidden">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-green-900 text-white relative overflow-hidden">
         {/* Futuristic grid overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -355,11 +354,11 @@ export default function Invest() {
         </div>
         
         {/* Decorative elements */}
-        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-yellow-100 to-green-100">
             Ready to Start Your Investment Journey?
           </h2>
           <p className="text-xl text-gray-300 mb-10">
@@ -367,7 +366,7 @@ export default function Invest() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+            className="inline-block bg-gradient-to-r from-yellow-500 to-green-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-yellow-600 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
           >
             Schedule a Consultation
           </Link>

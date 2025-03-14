@@ -1,7 +1,7 @@
 'use client';
-
 import { useState } from 'react';
 import Image from 'next/image';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function WorkWithUs() {
   const [formData, setFormData] = useState({
@@ -48,35 +48,170 @@ export default function WorkWithUs() {
     });
   };
 
+  const values = [
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Innovation',
+      description: 'We are committed to innovation and pushing the boundaries of what is possible.'
+    },
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Excellence',
+      description: 'We strive for excellence in everything we do.'
+    },
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Impact',
+      description: 'We aim to create lasting impact through our work.'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Career Growth',
+      description: 'We offer opportunities for career growth and development.'
+    },
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Team Collaboration',
+      description: 'We foster a collaborative team environment.'
+    },
+    {
+      icon: <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+        {/* Add your icon component here */}
+      </div>,
+      title: 'Work-Life Balance',
+      description: 'We value work-life balance and encourage a healthy lifestyle.'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-black animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-yellow-600 to-green-800 animate-gradient-x"></div>
         
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-black/80 rounded-full px-4 py-1">
+          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
+            <div className="bg-gray-900/90 rounded-full px-4 py-1">
               <span className="text-white text-sm font-medium">Join Our Team</span>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Work With <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Sabhuku</span>
+            Work With <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-           {` Join our team and be part of Zimbabwe's industrial transformation. 
-            We're always looking for talented individuals who share our vision.`}
+            Join us in our mission to transform industries and create lasting impact through innovation and excellence.
           </p>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="relative py-24 bg-white">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+              <span className="text-green-600 font-medium">OUR VALUES</span>
+              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+              What We Stand For
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="p-6 rounded-2xl bg-white shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                <div className="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-yellow-500 to-green-600 p-0.5">
+                  <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
+                    {value.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-green-600 transition-colors">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="relative py-24 bg-gradient-to-r from-gray-900 to-green-900 text-white">
+        {/* Futuristic grid overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
+              <span className="text-yellow-400/80 font-medium">BENEFITS</span>
+              <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
+              Why Work With Us
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="w-12 h-12 mb-6 text-yellow-400">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+            Ready to Join Our Team?
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Take the first step towards an exciting career with Sabhuku. We're always looking for talented individuals who share our values and vision.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center px-8 py-4 rounded-xl text-white text-lg font-semibold
+              bg-gradient-to-r from-yellow-500 to-green-600 hover:from-yellow-600 hover:to-green-700
+              transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
+            Apply Now
+            <ArrowRightIcon className="w-5 h-5 ml-2" />
+          </a>
         </div>
       </section>
 
@@ -94,18 +229,18 @@ export default function WorkWithUs() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <div className="absolute top-24 right-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-24 left-10 w-40 h-40 bg-purple-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-              <span className="text-blue-600 font-medium">APPLICATION FORM</span>
-              <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+              <span className="text-green-600 font-medium">APPLICATION FORM</span>
+              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
               Start Your Journey With Us
             </h2>
           </div>
@@ -123,7 +258,7 @@ export default function WorkWithUs() {
                   required
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -139,7 +274,7 @@ export default function WorkWithUs() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -156,7 +291,7 @@ export default function WorkWithUs() {
                 required
                 value={formData.position}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                 placeholder="What position are you interested in?"
               />
             </div>
@@ -172,7 +307,7 @@ export default function WorkWithUs() {
                 required
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                 placeholder="Tell us why you'd like to join our team..."
               />
             </div>
@@ -192,8 +327,8 @@ export default function WorkWithUs() {
                   file:mr-4 file:py-3 file:px-6
                   file:rounded-full file:border-0
                   file:text-sm file:font-semibold
-                  file:bg-blue-50 file:text-blue-700
-                  hover:file:bg-blue-100
+                  file:bg-yellow-50 file:text-yellow-700
+                  hover:file:bg-yellow-100
                   hover:border-gray-400
                   transition-all duration-300"
               />
@@ -213,9 +348,9 @@ export default function WorkWithUs() {
               <button
                 type="submit"
                 className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
-                  bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700
+                  bg-gradient-to-r from-gray-600 to-green-600 hover:from-gray-700 hover:to-green-700
                   transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               >
                 Submit Application
               </button>

@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero Section - More futuristic with animated gradient */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-black animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-yellow-600 to-green-800 animate-gradient-x"></div>
         
         {/* Subtle grid overlay instead of circular patterns */}
         <div className="absolute inset-0 opacity-10">
@@ -18,13 +18,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-black/80 rounded-full px-4 py-1">
+          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
+            <div className="bg-gray-900/90 rounded-full px-4 py-1">
               <span className="text-white text-sm font-medium">{`Innovating for Zimbabwe's Future`}</span>
             </div>
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 text-white tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Sabhuku Corporation</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku Corporation</span>
           </h1>
           <p className="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">
             Pioneering Innovation Across Multiple Sectors in Zimbabwe
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/about"
-              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
               Discover Our Vision
             </Link>
@@ -48,30 +48,19 @@ export default function Home() {
 
       {/* Enhanced Business Pillars Section */}
       <section className="py-36 px-4 sm:px-6 lg:px-8 bg-white relative">
-        {/* Watermark background */}
-        <div className="absolute inset-0 opacity-[0.05] z-0">
-          <Image
-            src="/images/logo.png"
-            alt="Watermark"
-            fill
-            className="object-contain"
-            style={{ filter: 'grayscale(100%)' }}
-          />
-        </div>
-        
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <div className="absolute top-24 right-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-24 left-10 w-40 h-40 bg-purple-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-              <span className="text-blue-600 font-medium">OUR COMPANIES</span>
-              <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+              <span className="text-green-600 font-medium">OUR COMPANIES</span>
+              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
               Our Business Pillars
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -152,7 +141,7 @@ export default function Home() {
           {Array.from({ length: 24 }).map((_, i) => (
             <div 
               key={i} 
-              className={`absolute h-[4vh] w-full ${i % 2 === 0 ? 'bg-black' : 'bg-white'}`} 
+              className={`absolute h-[4vh] w-full ${i % 2 === 0 ? 'bg-gray-900' : 'bg-gray-100'}`} 
               style={{ 
                 top: `${i * 4}vh`,
                 animation: `slideIn 1.5s ease-out ${i * 0.1}s both`,
@@ -167,11 +156,11 @@ export default function Home() {
           <div className="bg-white/95 backdrop-blur-md rounded-2xl p-10 shadow-xl border border-gray-100">
             <div className="text-center mb-10">
               <div className="inline-flex items-center justify-center mb-4">
-                <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-                <span className="text-blue-600 font-medium">OUR HERITAGE</span>
-                <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+                <span className="h-1 w-10 bg-yellow-500 rounded-full mr-2"></span>
+                <span className="text-yellow-600 font-medium">OUR HERITAGE</span>
+                <span className="h-1 w-10 bg-yellow-500 rounded-full ml-2"></span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
                 Our African Heritage
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -185,7 +174,7 @@ export default function Home() {
                   title: 'Local Expertise',
                   description: "Our team combines deep local knowledge with global best practices to deliver solutions tailored to Zimbabwe's unique needs.",
                   icon: (
-                    <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                   )
@@ -194,7 +183,7 @@ export default function Home() {
                   title: 'Sustainable Growth',
                   description: "We're committed to sustainable development that benefits communities while preserving our natural resources for future generations.",
                   icon: (
-                    <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   )
@@ -203,7 +192,7 @@ export default function Home() {
                   title: 'Innovation Focus',
                   description: "By embracing cutting-edge technologies, we're helping Zimbabwe leapfrog into a more prosperous and connected future.",
                   icon: (
-                    <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   )
@@ -211,7 +200,7 @@ export default function Home() {
               ].map((item, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                   <div className="flex items-center mb-4">
-                    <div className="p-2 bg-blue-50 rounded-lg mr-3">
+                    <div className="p-2 bg-gray-50 rounded-lg mr-3">
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
@@ -227,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-black text-white relative overflow-hidden">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-green-900 text-white relative overflow-hidden">
         {/* Futuristic grid overlay with animation */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -238,16 +227,16 @@ export default function Home() {
         </div>
         
         {/* Decorative elements */}
-        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center justify-center mb-6">
-            <span className="h-1 w-10 bg-white/50 rounded-full mr-2"></span>
-            <span className="text-white/80 font-medium">JOIN OUR MISSION</span>
-            <span className="h-1 w-10 bg-white/50 rounded-full ml-2"></span>
+            <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
+            <span className="text-yellow-400/80 font-medium">JOIN OUR MISSION</span>
+            <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
             Ready to Join Our Journey?
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
@@ -256,13 +245,13 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               href="/work-with-us"
-              className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-blue-500/50"
+              className="inline-block bg-yellow-500 text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-yellow-500/50"
             >
               Join Our Team
             </Link>
             <Link
               href="/invest"
-              className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="inline-block bg-transparent border-2 border-green-400 text-green-400 px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-400 hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
               Investment Opportunities
             </Link>

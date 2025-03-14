@@ -33,25 +33,17 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-black animate-gradient-x"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-yellow-600 to-green-800 animate-gradient-x"></div>
         
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="bg-black/80 rounded-full px-4 py-1">
+          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
+            <div className="bg-gray-900/90 rounded-full px-4 py-1">
               <span className="text-white text-sm font-medium">Get in Touch</span>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Contact <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Sabhuku</span>
+            Contact <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
             {`Have a question or want to learn more about our companies? 
@@ -62,30 +54,19 @@ export default function Contact() {
 
       {/* Contact Form Section */}
       <section className="relative py-24 bg-white">
-        {/* Watermark background */}
-        <div className="absolute inset-0 opacity-[0.03] z-0">
-          <Image
-            src="/images/logo.png"
-            alt="Watermark"
-            fill
-            className="object-contain"
-            style={{ filter: 'grayscale(100%)' }}
-          />
-        </div>
-
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <div className="absolute top-24 right-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-24 left-10 w-40 h-40 bg-purple-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-              <span className="text-blue-600 font-medium">CONTACT FORM</span>
-              <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
+              <span className="text-green-600 font-medium">CONTACT FORM</span>
+              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
               Send Us a Message
             </h2>
           </div>
@@ -103,7 +84,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                   placeholder="Enter your name"
                 />
               </div>
@@ -119,7 +100,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -136,7 +117,7 @@ export default function Contact() {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                 placeholder="What is your message about?"
               />
             </div>
@@ -152,7 +133,7 @@ export default function Contact() {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-gray-400"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
                 placeholder="Type your message here..."
               />
             </div>
@@ -167,9 +148,9 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
-                  bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700
+                  bg-gradient-to-r from-yellow-500 to-green-600 hover:from-yellow-600 hover:to-green-700
                   transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               >
                 Send Message
               </button>
@@ -179,7 +160,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="relative py-24 bg-gradient-to-r from-gray-900 to-black text-white overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-r from-gray-900 to-green-900 text-white overflow-hidden">
         {/* Futuristic grid overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -188,19 +169,19 @@ export default function Contact() {
             animation: 'pulse 4s ease-in-out infinite'
           }}></div>
         </div>
-
+        
         {/* Decorative elements */}
-        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
-
+        <div className="absolute top-20 right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-white/50 rounded-full mr-2"></span>
-              <span className="text-white/80 font-medium">REACH US</span>
-              <span className="h-1 w-10 bg-white/50 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
+              <span className="text-yellow-400/80 font-medium">REACH US</span>
+              <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
               Get in Touch
             </h2>
           </div>
