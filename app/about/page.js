@@ -100,7 +100,7 @@ export default function About() {
                         src={company.logo}
                         alt={`${company.name} logo`}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
                   </div>
