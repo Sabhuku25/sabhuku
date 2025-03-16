@@ -108,7 +108,7 @@ export default function WorkWithUs() {
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             Work With Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl font-bold mx-auto leading-relaxed">
             Join us in our mission to transform industries and create lasting impact through innovation and excellence.
           </p>
         </div>
@@ -137,8 +137,8 @@ export default function WorkWithUs() {
             {values.map((value, index) => (
               <div key={index} className="p-6 rounded-2xl bg-white shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
                 
-                <h3 className="text-xl font-bold mb-4 text-gray-600 group-hover:text-green-600 transition-colors">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-gray-600 group-hover:text-green-600 transition-colors text-center">{value.title}</h3>
+                <p className="text-gray-600 text-center">{value.description}</p>
               </div>
             ))}
           </div>
@@ -175,8 +175,8 @@ export default function WorkWithUs() {
             {benefits.map((benefit, index) => (
               <div key={index} className="p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
     
-                <h3 className="text-xl font-bold mb-4 text-gray-400">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-gray-400 text-center">{benefit.title}</h3>
+                <p className="text-gray-400 text-center">{benefit.description}</p>
               </div>
             ))}
           </div>

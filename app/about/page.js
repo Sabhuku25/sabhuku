@@ -54,7 +54,7 @@ export default function About() {
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             About Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl font-bold mx-auto leading-relaxed">
             Sabhuku Corporation is a leading multi-sectoral industrial group founded in Africa, 
             whose subsidiary companies focus on providing customers with Innovative Cutting-Edge 
             Products & Services.

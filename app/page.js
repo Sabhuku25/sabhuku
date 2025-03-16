@@ -26,7 +26,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 text-white tracking-tight">
             <span className="bg-clip-text text-gray-400">Sabhuku Corporation</span>
           </h1>
-          <p className="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto text-gray-400">
+          <p className="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto font-bold text-gray-400">
             EMBRACE THE TRUE YOU
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -69,14 +69,14 @@ export default function Home() {
               },
               {
                 title: 'Kudyara Agriculture',
-                description: 'Sustainable cutting edge agriculture solutions',
+                description: 'Sustainable cutting-edge agriculture solutions',
                 href: '/companies/kudyara-agriculture',
                 color: 'from-green-500 to-green-700',
                 logo: '/images/kudyara.png'
               },
               {
                 title: 'Kuvhakacha Living',
-                description: 'High end leisure property development',
+                description: 'High-end leisure property development',
                 href: '/companies/kuvhakacha-living',
                 color: 'from-orange-500 to-orange-700',
                 logo: '/images/kuvhakacha.png'
@@ -106,13 +106,13 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-gray-600 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-600 group-hover:text-green-600 transition-colors text-center">
                     {pillar.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">
+                  <p className="text-gray-600 mb-4 flex-grow text-center">
                     {pillar.description}
                   </p>
-                  <span className="text-green-600 group-hover:text-green-700 font-medium inline-flex items-center mt-2">
+                  <span className="text-green-600 group-hover:text-green-700 font-medium inline-flex items-center justify-center mt-2 w-full">
                     Visit
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -181,7 +181,7 @@ export default function Home() {
                 },
                 {
                   title: 'Innovation Focus',
-                  description: "By embracing cutting-edge technologies, we're helping Zimbabwe leapfrog into a more prosperous and connected future.",
+                  description: "By embracing cutting-edge technologies, we're helping Africa leapfrog into a more prosperous and connected future.",
                   icon: (
                     <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -190,13 +190,13 @@ export default function Home() {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-4 justify-center">
                     <div className="p-2 bg-gray-50 rounded-lg mr-3">
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-600">{item.title}</h3>
                   </div>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-center">
                     {item.description}
                   </p>
                 </div>
@@ -227,7 +227,10 @@ export default function Home() {
             Ready to work with us?
           </h2>
           <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
-            Discover opportunities to work with us, invest in our vision, or learn more about our companies. Together, we can build a stronger Africa.
+            Discover opportunities to work with us and learn more about our companies. 
+          </p>
+          <p className="text-xl text-gray-400 mb-10 font-bold max-w-3xl mx-auto">
+          Together, we can build a stronger Africa.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link

@@ -61,7 +61,7 @@ export default function Invest() {
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             Invest in Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-400 font-bold max-w-4xl mx-auto leading-relaxed">
             {`Join us in building Africa's industrial future through strategic investments in our portfolio companies.`}
           </p>
         </div>
@@ -150,8 +150,8 @@ export default function Invest() {
                   >
                     <div className={`h-2 bg-gradient-to-r ${opportunity.color}`}></div>
                     <div className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-gray-600">{opportunity.title}</h3>
-                      <p className="text-gray-600 mb-6">{opportunity.description}</p>
+                      <h3 className="text-2xl font-bold mb-4 text-gray-600 text-center">{opportunity.title}</h3>
+                      <p className="text-gray-600 mb-6 text-center">{opportunity.description}</p>
                       <Link 
                         href="/contact" 
                         className="inline-flex items-center justify-center w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
@@ -313,8 +313,8 @@ export default function Invest() {
                     <div className="bg-green-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                       {benefit.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-gray-600">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h3 className="text-xl font-bold mb-4 text-gray-600 text-center">{benefit.title}</h3>
+                    <p className="text-gray-600 text-center">{benefit.description}</p>
                   </div>
                 ))}
               </div>

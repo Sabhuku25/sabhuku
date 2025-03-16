@@ -32,15 +32,21 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-yellow-600 to-green-800 animate-gradient-x"></div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/call.jpg')` }}
+        ></div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-yellow-600/90 to-green-800/90 animate-gradient-x"></div>
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             Contact  Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl font-bold sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             {`Have a question or want to learn more about our companies? 
             We'd love to hear from you.`}
           </p>
@@ -183,21 +189,21 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-gray-400">Visit Us</h3>
-              <p className="text-gray-400">103 Good Hope Road, Westgate</p>
-              <p className="text-gray-400">Harare, Zimbabwe </p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-400 text-center">Visit Us</h3>
+              <p className="text-gray-400 text-center">103 Good Hope Road, Westgate</p>
+              <p className="text-gray-400 text-center">Harare, Zimbabwe </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-gray-400">Call Us</h3>
-              <p className="text-gray-300">Phone 1: +263 242 002 880</p>
-              <p className="text-gray-300">Phone 2: +263 714 257 269</p>
-              <p className="text-gray-300">Phone 3: +263 775 247 977</p>
+              <h3 className="text-xl font-semibold text-center mb-4 text-gray-400">Call Us</h3>
+              <p className="text-gray-300 text-center">Phone 1: +263 242 002 880</p>
+              <p className="text-gray-300 text-center">Phone 2: +263 714 257 269</p>
+              <p className="text-gray-300 text-center">Phone 3: +263 775 247 977</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-xl font-semibold mb-4 text-gray-400">Email Us</h3>
-              <p className="text-gray-400">info@sabhukucorporation.com</p>
+              <h3 className="text-xl font-semibold mb-4 text-center text-gray-400">Email Us</h3>
+              <p className="text-gray-400 text-center">info@sabhukucorporation.com</p>
             </div>
           </div>
         </div>
