@@ -5,7 +5,7 @@ export default function About() {
   const companies = [
     {
       name: 'Kurapa Healthcare',
-      description: 'Leading healthcare solutions provider focused on improving medical access and quality in Zimbabwe.',
+      description: 'Leading healthcare solutions provider focused on improving medical access and quality in Africa.',
       href: '/companies/kurapa-healthcare',
       color: 'from-blue-500 to-blue-700',
       logo: '/images/kurapa.png'
@@ -50,16 +50,12 @@ export default function About() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
-            <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">{`Building Zimbabwe's Future`}</span>
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            About <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku Corporation</span>
+          
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
+            About Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Sabhuku Corporation is a leading multi-sectoral industrial group founded in Zimbabwe, 
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Sabhuku Corporation is a leading multi-sectoral industrial group founded in Africa, 
             whose subsidiary companies focus on providing customers with Innovative Cutting-Edge 
             Products & Services.
           </p>
@@ -75,12 +71,7 @@ export default function About() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-              <span className="text-green-600 font-medium">OUR SUBSIDIARIES</span>
-              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-clip-text text-gray-600">
               Our Companies
             </h2>
           </div>
@@ -104,7 +95,7 @@ export default function About() {
                       />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-600 group-hover:text-green-600 transition-colors">
                     {company.name}
                   </h3>
                   <p className="text-lg text-gray-600 mb-6">
@@ -124,8 +115,8 @@ export default function About() {
       </section>
 
       {/* Vision Section */}
-      <section className="relative py-24 bg-gradient-to-r from-gray-900 to-green-900 text-white overflow-hidden">
-        {/* Futuristic grid overlay */}
+      {/* <section className="relative py-24 bg-gradient-to-r from-gray-900 to-green-900 text-white overflow-hidden">
+      
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
@@ -134,7 +125,7 @@ export default function About() {
           }}></div>
         </div>
 
-        {/* Decorative elements */}
+       
         <div className="absolute top-20 right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
 
@@ -153,7 +144,8 @@ export default function About() {
             agriculture, real estate, and environmental sectors.`}
           </p>
         </div>
-      </section>
+      </section> 
+      */}
     </div>
   );
 } 

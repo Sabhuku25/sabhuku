@@ -105,15 +105,10 @@ export default function WorkWithUs() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
-            <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Join Our Team</span>
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Work With <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
+            Work With Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             Join us in our mission to transform industries and create lasting impact through innovation and excellence.
           </p>
         </div>
@@ -129,11 +124,11 @@ export default function WorkWithUs() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-              <span className="text-green-600 font-medium">OUR VALUES</span>
-              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">OUR VALUES</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
               What We Stand For
             </h2>
           </div>
@@ -141,12 +136,8 @@ export default function WorkWithUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="p-6 rounded-2xl bg-white shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
-                <div className="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-yellow-500 to-green-600 p-0.5">
-                  <div className="w-full h-full rounded-xl bg-white flex items-center justify-center">
-                    {value.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-green-600 transition-colors">{value.title}</h3>
+                
+                <h3 className="text-xl font-bold mb-4 text-gray-600 group-hover:text-green-600 transition-colors">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -171,11 +162,11 @@ export default function WorkWithUs() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
-              <span className="text-yellow-400/80 font-medium">BENEFITS</span>
-              <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-400 rounded-full mr-2"></span>
+              <span className="text-gray-400 font-medium">BENEFITS</span>
+              <span className="h-1 w-10 bg-gray-400 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-400">
               Why Work With Us
             </h2>
           </div>
@@ -183,38 +174,16 @@ export default function WorkWithUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="w-12 h-12 mb-6 text-yellow-400">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+    
+                <h3 className="text-xl font-bold mb-4 text-gray-400">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
-            Ready to Join Our Team?
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            {`Take the first step towards an exciting career with Sabhuku. We're always looking for talented individuals who share our values and vision.`}
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 rounded-xl text-white text-lg font-semibold
-              bg-gradient-to-r from-yellow-500 to-green-600 hover:from-yellow-600 hover:to-green-700
-              transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-          >
-            Apply Now
-            <ArrowRightIcon className="w-5 h-5 ml-2" />
-          </a>
-        </div>
-      </section>
-
+    
       {/* Application Form Section */}
       <section className="relative py-24 bg-white">
         {/* Watermark background */}
@@ -236,11 +205,11 @@ export default function WorkWithUs() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-              <span className="text-green-600 font-medium">APPLICATION FORM</span>
-              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">APPLICATION FORM</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
               Start Your Journey With Us
             </h2>
           </div>

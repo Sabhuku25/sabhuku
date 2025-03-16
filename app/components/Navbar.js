@@ -9,9 +9,9 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white/90 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-26">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="relative h-12 w-12 hover:opacity-90 transition-opacity">
+            <Link href="/" className="relative h-24 w-24 hover:opacity-90 transition-opacity">
               <Image
                 src="/images/logo.png"
                 alt="Sabhuku Corporation Logo"
@@ -44,16 +44,16 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
             <Link href="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              About Us
+              About Us!
             </Link>
             <Link href="/work-with-us" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              Work With Us
+              Work With Us!
             </Link>
             <Link href="/invest" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              Invest In Us
+              Invest In Us!
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              Contact Us
+              Contact Us!
             </Link>
           </div>
         </div>
@@ -63,16 +63,16 @@ export default function Navbar() {
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
         <div className="pt-2 pb-3 space-y-1">
           <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            About Us
+            About Us!
           </Link>
           <Link href="/work-with-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Work With Us
+            Work With Us!
           </Link>
           <Link href="/invest" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Invest In Us
+            Invest In Us!
           </Link>
           <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-            Contact Us
+            Contact Us!
           </Link>
         </div>
       </div>

@@ -9,6 +9,7 @@ const companies = {
     mission: `An integrated healthcare company that is involved in pharmaceutical product distribution, pharmacy retailing and medical service provision at its medical centres, with plans to expand into the greater Africa region providing highly accessible, efficient and affordable care.`,
     color: 'from-blue-500 to-blue-700',
     logo: '/images/kurapa.png',
+    bgImage: '/images/kurapabg.jpeg',
     features: [
       'Medical Supply Distribution',
       'Retail Pharmacy Chain',
@@ -25,11 +26,12 @@ const companies = {
     mission: `Kudyara Agriculture's mission is to revolutionise Zimbabwe's agriculture sector through innovative, sustainable greenhouses and climate-smart solutions, promoting food security, climate resilience and resource efficiency in peri-urban and urban areas.`,
     color: 'from-green-500 to-green-700',
     logo: '/images/kudyara.png',
+    bgImage: '/images/kudyarabg.jpg',
     features: [
       'Enhanced Productivity',
       'Hydroponics',
       'Empowering Communities',
-      'Limited reliance on Soil'
+      'Limited Reliance On Soil'
     ],
     pitchdeck:"/docs/kudyara.pdf"
   },
@@ -41,11 +43,12 @@ const companies = {
     aesthetic appeal to meet the evolving needs of our communities.`,
     color: 'from-orange-500 to-orange-700',
     logo: '/images/kuvhakacha.png',
+    bgImage: '/images/kuvakachabg.jpg',
     features: [
       'Modern residential developments',
-      'Smart home solutions',
-      'Sustainable building practices',
-      'Property management services'
+      'Smart Home Solutions',
+      'Sustainable Building Practices',
+      'Property Management Services'
     ],
     pitchdeck:"/docs/kuvhakacha.pdf"
   },
@@ -55,10 +58,13 @@ const companies = {
     mission: `To provide eco-friendly, efficient, and innovative transport and logistics solutions in Zimbabwe by utilizing low-carbon and hybrid technologies, while building a sustainable infrastructure that fosters the adoption of electric vehicles (EVs) across the country`,
     color: 'from-emerald-500 to-emerald-700',
     logo: '/images/kuenda.png',
+    bgImage: '/images/kuendabg.jpg',
     features: [
       'Source Hybrid Cars for Ecofriendly Fleet',
-      'Offer travel and logistics services',
-      'Scale to across Zimbabwe then regionally',
+      'Offer Travel and Logistics Services',
+      'Scale To across Zimbabwe Rhen Regionally',
+      'Establish A Continent Wide Recharge Network'
+
     ],
     pitchdeck:"/docs/kuenda.pdf"
   }
@@ -81,22 +87,22 @@ export default function CompanyPage({ params }) {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        {/* Animated background */}
-        <div className={`absolute inset-0 bg-gradient-to-r ${company.color}`}></div>
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${company.bgImage})` }}
+        ></div>
         
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
+        {/* Gradient overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-r ${company.color} opacity-80`}></div>
+        
+       
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-white/20 to-white/40">
             <div className="bg-black/80 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Part of Sabhuku Corporation</span>
+              <span className="text-gray-400 text-sm font-medium">Division of Sabhuku Corporation</span>
             </div>
           </div>
           
@@ -113,12 +119,11 @@ export default function CompanyPage({ params }) {
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             {company.name}
           </h1>
         </div>
       </section>
-
       {/* Main Content Section */}
       <section className="relative py-24 bg-white">
         {/* Decorative elements */}
@@ -130,9 +135,9 @@ export default function CompanyPage({ params }) {
           {/* Overview Section */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-              <span className="text-blue-600 font-medium">OVERVIEW</span>
-              <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">OVERVIEW</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {company.overview}
@@ -142,9 +147,9 @@ export default function CompanyPage({ params }) {
           {/* Mission Section */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-blue-600 rounded-full mr-2"></span>
-              <span className="text-blue-600 font-medium">OUR MISSION</span>
-              <span className="h-1 w-10 bg-blue-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">OUR MISSION</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {company.mission}
@@ -153,7 +158,7 @@ export default function CompanyPage({ params }) {
 
           {/* Features Grid */}
           <div className="mt-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-600">
               Our Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -168,7 +173,7 @@ export default function CompanyPage({ params }) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900">{feature}</h3>
+                    <h3 className="text-xl font-semibold text-gray-600">{feature}</h3>
                   </div>
                 </div>
               ))}

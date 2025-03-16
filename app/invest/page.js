@@ -10,7 +10,7 @@ export default function Invest() {
   const investmentOpportunities = [
     {
       title: 'Healthcare Innovation Fund',
-      description: 'Invest in cutting-edge healthcare technologies and facilities that are transforming medical care in Zimbabwe.',
+      description: 'Invest in cutting-edge healthcare technologies and facilities that are transforming medical care in Africa.',
       minInvestment: '$50,000',
       sector: 'Healthcare',
       returns: '12-15% projected annual returns',
@@ -26,7 +26,7 @@ export default function Invest() {
     },
     {
       title: 'Modern Living Developments',
-      description: 'Participate in real estate projects that are creating contemporary living spaces across Zimbabwe.',
+      description: 'Participate in real estate projects that are creating contemporary living spaces across Africa.',
       minInvestment: '$100,000',
       sector: 'Real Estate',
       returns: '15-18% projected annual returns',
@@ -34,7 +34,7 @@ export default function Invest() {
     },
     {
       title: 'Renewable Energy Ventures',
-      description: "Invest in clean energy solutions that are powering Zimbabwe's sustainable future.",
+      description: "Invest in clean energy solutions that are powering Africa's sustainable future.",
       minInvestment: '$75,000',
       sector: 'Energy',
       returns: '13-16% projected annual returns',
@@ -58,16 +58,11 @@ export default function Invest() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
-            <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Investment Opportunities</span>
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Invest in <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
+            Invest in Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            {`Join us in building Zimbabwe's industrial future through strategic investments in our portfolio companies.`}
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            {`Join us in building Africa's industrial future through strategic investments in our portfolio companies.`}
           </p>
         </div>
       </section>
@@ -135,11 +130,11 @@ export default function Invest() {
             <div>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center justify-center mb-4">
-                  <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-                  <span className="text-green-600 font-medium">OPPORTUNITIES</span>
-                  <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+                  <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+                  <span className="text-gray-600 font-medium">OPPORTUNITIES</span>
+                  <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
                   Current Investment Opportunities
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -155,22 +150,8 @@ export default function Invest() {
                   >
                     <div className={`h-2 bg-gradient-to-r ${opportunity.color}`}></div>
                     <div className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-gray-900">{opportunity.title}</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-gray-600">{opportunity.title}</h3>
                       <p className="text-gray-600 mb-6">{opportunity.description}</p>
-                      <div className="grid grid-cols-2 gap-6 mb-8">
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <p className="text-sm text-gray-500 mb-1">Minimum Investment</p>
-                          <p className="font-semibold text-gray-900">{opportunity.minInvestment}</p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <p className="text-sm text-gray-500 mb-1">Sector</p>
-                          <p className="font-semibold text-gray-900">{opportunity.sector}</p>
-                        </div>
-                        <div className="col-span-2 bg-gray-50 p-4 rounded-lg">
-                          <p className="text-sm text-gray-500 mb-1">Projected Returns</p>
-                          <p className="font-semibold text-gray-900">{opportunity.returns}</p>
-                        </div>
-                      </div>
                       <Link 
                         href="/contact" 
                         className="inline-flex items-center justify-center w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
@@ -197,7 +178,7 @@ export default function Invest() {
                   <span className="text-green-600 font-medium">PROCESS</span>
                   <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
                   Our Investment Process
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -244,7 +225,7 @@ export default function Invest() {
                           {item.step}
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                          <h3 className="text-xl font-bold mb-4 text-gray-900">{item.title}</h3>
+                          <h3 className="text-xl font-bold mb-4 text-gray-600">{item.title}</h3>
                           <p className="text-gray-600">{item.description}</p>
                         </div>
                       </div>
@@ -263,11 +244,11 @@ export default function Invest() {
                   <span className="text-green-600 font-medium">BENEFITS</span>
                   <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
                   Benefits of Investing With Us
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Discover why investors choose Sabhuku Corporation for their strategic investments in Zimbabwe.
+                  Discover why investors choose Sabhuku Corporation for their strategic investments in Africa.
                 </p>
               </div>
               
@@ -284,7 +265,7 @@ export default function Invest() {
                   },
                   {
                     title: 'Local Expertise',
-                    description: 'Our deep understanding of the Zimbabwean market helps navigate complexities and identify unique opportunities.',
+                    description: 'Our deep understanding of the African market helps navigate complexities and identify unique opportunities.',
                     icon: (
                       <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -302,7 +283,7 @@ export default function Invest() {
                   },
                   {
                     title: 'Social Impact',
-                    description: "Your investment contributes to Zimbabwe's economic development and creates positive social change.",
+                    description: "Your investment contributes to Africa's economic development and creates positive social change.",
                     icon: (
                       <svg className="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -332,7 +313,7 @@ export default function Invest() {
                     <div className="bg-green-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                       {benefit.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-gray-900">{benefit.title}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-gray-600">{benefit.title}</h3>
                     <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 ))}
@@ -358,17 +339,17 @@ export default function Invest() {
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-yellow-100 to-green-100">
-            Ready to Start Your Investment Journey?
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-gray-400">
+            Invest In Us
           </h2>
           <p className="text-xl text-gray-300 mb-10">
-            {` Contact our investment team to discuss how you can be part of Zimbabwe's growth story.`}
+            {` Contact our investment team to discuss how you can be part of Africa's growth story.`}
           </p>
           <Link
             href="/contact"
             className="inline-block bg-gradient-to-r from-yellow-500 to-green-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-yellow-600 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
           >
-            Schedule a Consultation
+            Contact Us
           </Link>
         </div>
       </section>

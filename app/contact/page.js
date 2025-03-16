@@ -37,15 +37,10 @@ export default function Contact() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
-            <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">Get in Touch</span>
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-white">
-            Contact <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku</span>
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
+            Contact  Us
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             {`Have a question or want to learn more about our companies? 
             We'd love to hear from you.`}
           </p>
@@ -62,11 +57,11 @@ export default function Contact() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-              <span className="text-green-600 font-medium">CONTACT FORM</span>
-              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">CONTACT FORM</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-gray-600">
               Send Us a Message
             </h2>
           </div>
@@ -177,32 +172,32 @@ export default function Contact() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
-              <span className="text-yellow-400/80 font-medium">REACH US</span>
-              <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-400 rounded-full mr-2"></span>
+              <span className="text-gray-400 font-medium">REACH US</span>
+              <span className="h-1 w-10 bg-gray-400 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
-              Get in Touch
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-gray-400">
+              Contact Us
             </h2>
           </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-white">Visit Us</h3>
-              <p className="text-gray-300">123 Business District</p>
-              <p className="text-gray-300">Harare, Zimbabwe</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-400">Visit Us</h3>
+              <p className="text-gray-400">103 Good Hope Road, Westgate</p>
+              <p className="text-gray-400">Harare, Zimbabwe </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-white">Call Us</h3>
-              <p className="text-gray-300">Phone: +263 123 456 789</p>
-              <p className="text-gray-300">Fax: +263 123 456 790</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-400">Call Us</h3>
+              <p className="text-gray-300">Phone 1: +263 242 002 880</p>
+              <p className="text-gray-300">Phone 2: +263 714 257 269</p>
+              <p className="text-gray-300">Phone 3: +263 775 247 977</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/20 transition-all duration-300 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-xl font-semibold mb-4 text-white">Email Us</h3>
-              <p className="text-gray-300">info@sabhuku.co.zw</p>
-              <p className="text-gray-300">support@sabhuku.co.zw</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-400">Email Us</h3>
+              <p className="text-gray-400">info@sabhukucorporation.com</p>
             </div>
           </div>
         </div>

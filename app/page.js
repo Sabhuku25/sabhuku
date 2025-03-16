@@ -20,27 +20,21 @@ export default function Home() {
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
             <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-white text-sm font-medium">{`Innovating for Zimbabwe's Future`}</span>
+              <span className="text-gray-400 text-sm font-medium">{`Cutting Edge innovation for Africa's Future`}</span>
             </div>
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 text-white tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-green-400">Sabhuku Corporation</span>
+            <span className="bg-clip-text text-gray-400">Sabhuku Corporation</span>
           </h1>
-          <p className="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">
-            Pioneering Innovation Across Multiple Sectors in Zimbabwe
+          <p className="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto text-gray-400">
+            EMBRACE THE TRUE YOU
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/about"
-              className="inline-block bg-yellow-500 text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              Discover Our Vision
-            </Link>
-            <Link
               href="/contact"
-              className="inline-block bg-transparent text-white border-2 border-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="inline-block bg-transparent text-gray-400 border-2 border-gray-400 px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
-              Get in Touch
+              Contact Us
             </Link>
           </div>
         </div>
@@ -56,43 +50,40 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="h-1 w-10 bg-green-600 rounded-full mr-2"></span>
-              <span className="text-green-600 font-medium">OUR COMPANIES</span>
-              <span className="h-1 w-10 bg-green-600 rounded-full ml-2"></span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">OUR COMPANIES</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
-              Our Business Pillars
-            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Driving innovation and excellence across multiple sectors to build a stronger Zimbabwe
+              Driving innovation and excellence across multiple sectors to build a stronger Africa
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: 'Kurapa Healthcare',
-                description: 'Innovative healthcare solutions for a healthier Zimbabwe',
+                description: 'Integrated healthcare solutions for a Africa',
                 href: '/companies/kurapa-healthcare',
                 color: 'from-blue-500 to-blue-700',
                 logo: '/images/kurapa.png'
               },
               {
                 title: 'Kudyara Agriculture',
-                description: 'Sustainable farming practices for food security',
+                description: 'Sustainable cutting edge agriculture solutions',
                 href: '/companies/kudyara-agriculture',
                 color: 'from-green-500 to-green-700',
                 logo: '/images/kudyara.png'
               },
               {
                 title: 'Kuvhakacha Living',
-                description: 'Modern living spaces for contemporary lifestyles',
+                description: 'High end leisure property development',
                 href: '/companies/kuvhakacha-living',
                 color: 'from-orange-500 to-orange-700',
                 logo: '/images/kuvhakacha.png'
               },
               {
                 title: 'Kuenda Green',
-                description: 'Eco-friendly solutions for a sustainable future',
+                description: 'Eco-friendly mobility and transport solutions',
                 href: '/companies/kuenda-green',
                 color: 'from-emerald-500 to-emerald-700',
                 logo: '/images/kuenda.png'
@@ -115,13 +106,13 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-600 group-hover:text-green-600 transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="text-gray-600 mb-4 flex-grow">
                     {pillar.description}
                   </p>
-                  <span className="text-blue-600 group-hover:text-blue-700 font-medium inline-flex items-center mt-2">
+                  <span className="text-green-600 group-hover:text-green-700 font-medium inline-flex items-center mt-2">
                     Visit
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -156,15 +147,15 @@ export default function Home() {
           <div className="bg-white/95 backdrop-blur-md rounded-2xl p-10 shadow-xl border border-gray-100">
             <div className="text-center mb-10">
               <div className="inline-flex items-center justify-center mb-4">
-                <span className="h-1 w-10 bg-yellow-500 rounded-full mr-2"></span>
-                <span className="text-yellow-600 font-medium">OUR HERITAGE</span>
-                <span className="h-1 w-10 bg-yellow-500 rounded-full ml-2"></span>
+                <span className="h-1 w-10 bg-gray-400 rounded-full mr-2"></span>
+                <span className="text-gray-400 font-medium">OUR HERITAGE</span>
+                <span className="h-1 w-10 bg-gray-400 rounded-full ml-2"></span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-green-600">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-clip-text text-gray-600">
                 Our African Heritage
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Proudly Zimbabwean, we draw inspiration from our rich cultural heritage while embracing innovation and technology to build a brighter future.
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Proudly African, we draw inspiration from our rich cultural heritage while embracing innovation and technology to build a brighter future.
               </p>
             </div>
             
@@ -172,7 +163,7 @@ export default function Home() {
               {[
                 {
                   title: 'Local Expertise',
-                  description: "Our team combines deep local knowledge with global best practices to deliver solutions tailored to Zimbabwe's unique needs.",
+                  description: "Our team combines deep local knowledge with global best practices to deliver solutions tailored to Africa's unique needs.",
                   icon: (
                     <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -203,9 +194,9 @@ export default function Home() {
                     <div className="p-2 bg-gray-50 rounded-lg mr-3">
                       {item.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-600">{item.title}</h3>
                   </div>
-                  <p className="text-gray-700">
+                  <p className="text-gray-600">
                     {item.description}
                   </p>
                 </div>
@@ -231,29 +222,25 @@ export default function Home() {
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center justify-center mb-6">
-            <span className="h-1 w-10 bg-yellow-500/50 rounded-full mr-2"></span>
-            <span className="text-yellow-400/80 font-medium">JOIN OUR MISSION</span>
-            <span className="h-1 w-10 bg-yellow-500/50 rounded-full ml-2"></span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-white to-green-400">
-            Ready to Join Our Journey?
+          
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 bg-clip-text text-gray-400">
+            Ready to work with us?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-            Discover opportunities to work with us, invest in our vision, or learn more about our companies. Together, we can build a stronger Zimbabwe.
+          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+            Discover opportunities to work with us, invest in our vision, or learn more about our companies. Together, we can build a stronger Africa.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               href="/work-with-us"
               className="inline-block bg-yellow-500 text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-yellow-500/50"
             >
-              Join Our Team
+              Work With Us
             </Link>
             <Link
               href="/invest"
               className="inline-block bg-transparent border-2 border-green-400 text-green-400 px-10 py-4 rounded-full text-lg font-semibold hover:bg-green-400 hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
-              Investment Opportunities
+              Investment In Us
             </Link>
           </div>
         </div>
