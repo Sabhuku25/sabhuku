@@ -62,7 +62,7 @@ export default function Home() {
             {[
               {
                 title: 'Kurapa Healthcare',
-                description: 'Integrated healthcare solutions for a Africa',
+                description: 'Integrated healthcare solutions for Africa',
                 href: '/companies/kurapa-healthcare',
                 color: 'from-blue-500 to-blue-700',
                 logo: '/images/kurapa.png'
