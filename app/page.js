@@ -20,7 +20,7 @@ export default function Home() {
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
             <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-gray-400 text-sm font-medium">{`Cutting Edge innovation for Africa's Future`}</span>
+              <span className="text-gray-400 text-sm font-medium">{`Cutting-Edge innovation for Africa's Future`}</span>
             </div>
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 text-white tracking-tight">
@@ -158,49 +158,69 @@ export default function Home() {
                 Proudly African, we draw inspiration from our rich cultural heritage while embracing innovation and technology to build a brighter future.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Local Expertise',
-                  description: "Our team combines deep local knowledge with global best practices to deliver solutions tailored to Africa's unique needs.",
-                  icon: (
-                    <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                  )
-                },
-                {
-                  title: 'Sustainable Growth',
-                  description: "We're committed to sustainable development that benefits communities while preserving our natural resources for future generations.",
-                  icon: (
-                    <svg className="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  )
-                },
-                {
-                  title: 'Innovation Focus',
-                  description: "By embracing cutting-edge technologies, we're helping Africa leapfrog into a more prosperous and connected future.",
-                  icon: (
-                    <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  )
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                  <div className="flex items-center mb-4 justify-center">
-                    <div className="p-2 bg-gray-50 rounded-lg mr-3">
-                      {item.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-600">{item.title}</h3>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Map Container */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600 rounded-2xl blur-xl opacity-20"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-full h-[400px]">
+                    <Image
+                      src="/images/africa.jpg"
+                      alt="Map of Africa"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
-                  <p className="text-gray-600 text-center">
-                    {item.description}
-                  </p>
                 </div>
-              ))}
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 gap-8">
+                {[
+                  {
+                    title: 'Local Expertise',
+                    description: "Our team combines deep local knowledge with global best practices to deliver solutions tailored to Africa's unique needs.",
+                    icon: (
+                      <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: 'Sustainable Growth',
+                    description: "We're committed to sustainable development that benefits communities while preserving our natural resources for future generations.",
+                    icon: (
+                      <svg className="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    )
+                  },
+                  {
+                    title: 'Innovation Focus',
+                    description: "By embracing cutting-edge technologies, we're helping Africa leapfrog into a more prosperous and connected future.",
+                    icon: (
+                      <svg className="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    )
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div className="flex items-center mb-4">
+                      <div className="p-2 bg-gray-50 rounded-lg mr-3">
+                        {item.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-600">{item.title}</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

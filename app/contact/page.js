@@ -43,6 +43,19 @@ export default function Contact() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Logo */}
+          <div className="mb-8 w-32 h-32 mx-auto relative">
+            <div className="absolute inset-0 bg-white/10 rounded-xl backdrop-blur-sm"></div>
+            <div className="relative w-full h-full p-4">
+              <Image
+                src="/images/logo.png"
+                alt="Sabhuku Corporation Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+
           <h1 className="text-4xl sm:text-6xl font-bold mb-8 text-gray-400">
             Contact  Us
           </h1>

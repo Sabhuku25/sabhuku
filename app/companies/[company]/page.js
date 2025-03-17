@@ -62,8 +62,8 @@ const companies = {
     features: [
       'Source Hybrid Cars for Ecofriendly Fleet',
       'Offer Travel and Logistics Services',
-      'Scale To across Zimbabwe Rhen Regionally',
-      'Establish A Continent Wide Recharge Network'
+      'Scale To across Zimbabwe Then Regionally',
+      'Establish A Continent Wide Recharge Station Network'
 
     ],
     pitchdeck:"/docs/kuenda.pdf"
@@ -102,7 +102,7 @@ export default function CompanyPage({ params }) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-white/20 to-white/40">
             <div className="bg-black/80 rounded-full px-4 py-1">
-              <span className="text-gray-400 text-sm font-medium">Division of Sabhuku Corporation</span>
+              <span className="text-gray-400 text-sm font-medium">Member of Sabhuku Corporation</span>
             </div>
           </div>
           
