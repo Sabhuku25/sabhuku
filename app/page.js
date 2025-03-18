@@ -20,7 +20,7 @@ export default function Home() {
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <div className="mb-8 inline-block p-1 rounded-full bg-gradient-to-r from-yellow-500 to-green-600">
             <div className="bg-gray-900/90 rounded-full px-4 py-1">
-              <span className="text-gray-400 text-sm font-medium">{`Cutting-Edge innovation for Africa's Future`}</span>
+              <span className="text-gray-400 text-sm font-medium">{`Cutting-Edge Innovation for Africa's Future`}</span>
             </div>
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 text-white tracking-tight">
