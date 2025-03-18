@@ -178,6 +178,21 @@ export default function CompanyPage({ params }) {
                 </div>
               ))}
             </div>
+
+            {/* Kudyara Agriculture Image */}
+            {companySlug === 'kudyara-agriculture' && (
+              <div className="mt-16 flex justify-center">
+                <div className="relative w-3/4 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/datya.jpg"
+                    alt="Kudyara Agriculture Facility"
+                    fill
+                    className="object-cover rounded-2xl"
+                    priority
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           {/* CTA Section */}
