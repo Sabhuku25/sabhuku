@@ -32,13 +32,7 @@ export default function Contact() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/call.jpg')` }}
-        ></div>
-        
-        {/* Gradient overlay */}
+        {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-yellow-600/90 to-green-800/90 animate-gradient-x"></div>
         
         {/* Content */}
@@ -73,7 +67,7 @@ export default function Contact() {
         <div className="absolute top-24 right-10 w-32 h-32 bg-yellow-100 rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute bottom-24 left-10 w-40 h-40 bg-green-100 rounded-full opacity-20 blur-3xl"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
               <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
@@ -85,91 +79,111 @@ export default function Contact() {
             </h2>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="space-y-8 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
+                    placeholder="Enter your name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
-                  Your Name
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-900 mb-2">
+                  Subject
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="subject"
+                  id="subject"
                   required
-                  value={formData.name}
+                  value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
-                  placeholder="Enter your name"
+                  placeholder="What is your message about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
-                  Email Address
+                <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
+                  Message
                 </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={6}
                   required
-                  value={formData.email}
+                  value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
-                  placeholder="Enter your email address"
+                  placeholder="Type your message here..."
                 />
               </div>
-            </div>
 
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-900 mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                required
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
-                placeholder="What is your message about?"
-              />
-            </div>
+              {submitStatus && (
+                <div className="p-4 rounded-xl bg-green-50 text-green-700 border border-green-100">
+                  {submitStatus}
+                </div>
+              )}
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows={6}
-                required
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300 hover:border-gray-400"
-                placeholder="Type your message here..."
-              />
-            </div>
-
-            {submitStatus && (
-              <div className="p-4 rounded-xl bg-green-50 text-green-700 border border-green-100">
-                {submitStatus}
+              <div>
+                <button
+                  type="submit"
+                  className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
+                    bg-gradient-to-r from-yellow-500 to-green-600 hover:from-yellow-600 hover:to-green-700
+                    transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                >
+                  Send Message
+                </button>
               </div>
-            )}
+            </form>
 
-            <div>
-              <button
-                type="submit"
-                className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
-                  bg-gradient-to-r from-yellow-500 to-green-600 hover:from-yellow-600 hover:to-green-700
-                  transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                Send Message
-              </button>
+            {/* Call Center Image */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600 rounded-2xl blur-xl opacity-20"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <div className="relative w-full h-[600px]">
+                  <Image
+                    src="/images/call.jpg"
+                    alt="Customer Service Representative"
+                    fill
+                    className="object-cover rounded-2xl"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </section>
 
