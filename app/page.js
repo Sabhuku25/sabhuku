@@ -55,7 +55,8 @@ export default function Home() {
               <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Driving innovation and excellence across multiple sectors to build a stronger Africa
+              Driving innovation and excellence across multiple sectors to build a stronger Africa<br/>
+              Sabhuku Corporation was Founded by Mr Takudzwa Panganai Kangai
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
