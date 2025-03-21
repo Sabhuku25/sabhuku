@@ -5,7 +5,7 @@ import Image from 'next/image';
 const companies = {
   'kurapa-healthcare': {
     name: 'Kurapa Healthcare',
-    overview: 'Kurapa Healthcare (Private) Limited is an Integrated Healthcare company focused initially on distribution of leading medical supplies sourced from reputable manufacturers of the highest standards both local and international. The company is a subsidiary of Sabhuku Corporation founded by Mr Takudzwa Kangai.',
+    overview: 'Kurapa Healthcare (Private) Limited is an Integrated Healthcare company focused initially on distribution of leading medical supplies sourced from reputable manufacturers of the highest standards both local and international.',
     mission: `An integrated healthcare company that is involved in pharmaceutical product distribution, pharmacy retailing and medical service provision at its medical centres, with plans to expand into the greater Africa region providing highly accessible, efficient and affordable care.`,
     color: 'from-blue-500 to-blue-700',
     logo: '/images/kurapa.png',
