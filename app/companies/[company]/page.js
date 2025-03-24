@@ -182,12 +182,27 @@ export default function CompanyPage({ params }) {
             {/* Kudyara Agriculture Image */}
             {companySlug === 'kudyara-agriculture' && (
               <div className="mt-16 flex justify-center">
-                <div className="relative w-3/4 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative w-3/4 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-white">
                   <Image
                     src="/images/datya.jpg"
                     alt="Kudyara Agriculture Facility"
                     fill
-                    className="object-cover rounded-2xl"
+                    className="object-contain rounded-2xl"
+                    priority
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Kuvhakacha Living Image */}
+            {companySlug === 'kuvhakacha-living' && (
+              <div className="mt-16 flex justify-center">
+                <div className="relative w-3/4 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-white">
+                  <Image
+                    src="/images/kudyaraaa.jpg"
+                    alt="Kuvhakacha Living Facility"
+                    fill
+                    className="object-contain rounded-2xl"
                     priority
                   />
                 </div>
