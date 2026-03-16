@@ -6,7 +6,51 @@ import Image from 'next/image';
 
 export default function Invest() {
   const [activeTab, setActiveTab] = useState('opportunities');
-  
+  const [investFormData, setInvestFormData] = useState({
+    name: '',
+    email: '',
+    investmentInterest: '',
+    message: '',
+    phone: ''
+  });
+  const [investSubmitStatus, setInvestSubmitStatus] = useState({ type: '', message: '' });
+  const [isInvestSubmitting, setIsInvestSubmitting] = useState(false);
+
+  const handleInvestChange = (e) => {
+    const { name, value } = e.target;
+    setInvestFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleInvestSubmit = async (e) => {
+    e.preventDefault();
+    setIsInvestSubmitting(true);
+    setInvestSubmitStatus({ type: '', message: '' });
+    try {
+      const res = await fetch('/api/invest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: investFormData.name,
+          email: investFormData.email,
+          investmentInterest: investFormData.investmentInterest,
+          message: investFormData.message,
+          phone: investFormData.phone || undefined
+        })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setInvestSubmitStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+        return;
+      }
+      setInvestSubmitStatus({ type: 'success', message: data.message || 'Thank you for your interest. Our investment team will be in touch soon!' });
+      setInvestFormData({ name: '', email: '', investmentInterest: '', message: '', phone: '' });
+    } catch {
+      setInvestSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+    } finally {
+      setIsInvestSubmitting(false);
+    }
+  };
+
   const investmentOpportunities = [
     {
       title: 'Healthcare Innovation Fund',
@@ -320,6 +364,113 @@ export default function Invest() {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Invest Inquiry Form Section */}
+      <section className="relative py-24 bg-white">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 via-yellow-500 to-green-600"></div>
+        <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="h-1 w-10 bg-gray-600 rounded-full mr-2"></span>
+              <span className="text-gray-600 font-medium">GET IN TOUCH</span>
+              <span className="h-1 w-10 bg-gray-600 rounded-full ml-2"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-600">
+              Request More Information
+            </h2>
+            <p className="text-gray-600">
+              Contact our investment team to discuss how you can be part of Africa&apos;s growth story.
+            </p>
+          </div>
+          <form onSubmit={handleInvestSubmit} className="space-y-6 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="invest-name" className="block text-sm font-medium text-gray-900 mb-2">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="invest-name"
+                  required
+                  value={investFormData.name}
+                  onChange={handleInvestChange}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="invest-email" className="block text-sm font-medium text-gray-900 mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="invest-email"
+                  required
+                  value={investFormData.email}
+                  onChange={handleInvestChange}
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="invest-phone" className="block text-sm font-medium text-gray-900 mb-2">Phone (optional)</label>
+              <input
+                type="tel"
+                name="phone"
+                id="invest-phone"
+                value={investFormData.phone}
+                onChange={handleInvestChange}
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300"
+                placeholder="+263..."
+              />
+            </div>
+            <div>
+              <label htmlFor="invest-interest" className="block text-sm font-medium text-gray-900 mb-2">Investment interest</label>
+              <select
+                name="investmentInterest"
+                id="invest-interest"
+                required
+                value={investFormData.investmentInterest}
+                onChange={handleInvestChange}
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300"
+              >
+                <option value="">Select sector</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Energy">Energy</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="invest-message" className="block text-sm font-medium text-gray-900 mb-2">Message</label>
+              <textarea
+                name="message"
+                id="invest-message"
+                rows={4}
+                required
+                value={investFormData.message}
+                onChange={handleInvestChange}
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300"
+                placeholder="Tell us about your investment goals..."
+              />
+            </div>
+            {investSubmitStatus.message && (
+              <div className={`p-4 rounded-xl ${
+                investSubmitStatus.type === 'error' ? 'bg-red-50 text-red-700 border border-red-100' : 'bg-green-50 text-green-700 border border-green-100'
+              }`}>
+                {investSubmitStatus.message}
+              </div>
+            )}
+            <button
+              type="submit"
+              disabled={isInvestSubmitting}
+              className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >
+              {isInvestSubmitting ? 'Sending...' : 'Send inquiry'}
+            </button>
+          </form>
         </div>
       </section>
 

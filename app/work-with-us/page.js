@@ -13,6 +13,7 @@ export default function WorkWithUs() {
   });
 
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -40,12 +41,32 @@ export default function WorkWithUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    // For now, we'll just show a success message
-    setSubmitStatus({
-      type: 'success',
-      message: 'Thank you for your application! We will review it and get back to you soon.'
-    });
+    if (!formData.cv) {
+      setSubmitStatus({ type: 'error', message: 'Please upload your CV (PDF).' });
+      return;
+    }
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+    try {
+      const fd = new FormData();
+      fd.append('fullName', formData.fullName);
+      fd.append('email', formData.email);
+      fd.append('position', formData.position);
+      fd.append('message', formData.message);
+      fd.append('cv', formData.cv);
+      const res = await fetch('/api/work-with-us', { method: 'POST', body: fd });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setSubmitStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+        return;
+      }
+      setSubmitStatus({ type: 'success', message: data.message || 'Thank you for your application! We will review it and get back to you soon.' });
+      setFormData({ fullName: '', email: '', position: '', message: '', cv: null });
+    } catch {
+      setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const values = [
@@ -286,6 +307,7 @@ export default function WorkWithUs() {
                 Upload your CV (PDF)
               </label>
               <input
+                key={formData.cv ? 'has-file' : 'no-file'}
                 type="file"
                 name="cv"
                 id="cv"
@@ -316,12 +338,13 @@ export default function WorkWithUs() {
             <div>
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full py-4 px-6 rounded-xl text-white text-lg font-semibold
                   bg-gradient-to-r from-gray-600 to-green-600 hover:from-gray-700 hover:to-green-700
                   transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Submit Application
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
             </div>
           </form>
